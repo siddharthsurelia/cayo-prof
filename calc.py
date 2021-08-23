@@ -16,7 +16,7 @@ AVAILABLE = {
             "WEED": 2,
             "COCAINE": 0,
             "PAINTING": 1,
-            "GOLD": 0
+            "GOLD": 2
         }
 
 WEIGHT = {
@@ -27,7 +27,7 @@ WEIGHT = {
             "GOLD": 66
         }
 
-PEOPLE = 1
+PEOPLE = 2
 
 a = p.LpVariable("a", lowBound = 0)
 c = p.LpVariable("c", lowBound = 0)
@@ -53,3 +53,4 @@ print("WEED: ", p.value(w))
 print("COCAINE: ", p.value(c))
 print("PAINTING: ", p.value(a))
 print("GOLD: ", p.value(g))
+print("MAX PROFIT: ", p.value(Lp_prob.objective))
