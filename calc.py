@@ -2,7 +2,8 @@ import pulp as p
 
 Lp_prob = p.LpProblem('cayo-prof', p.LpMaximize)
 
-VALUE = {
+# All values are in thousand $
+VALUE = {   
             "CASH": 87,
             "WEED": 148,
             "COCAINE": 220,
@@ -15,7 +16,7 @@ AVAILABLE = {
             "WEED": 2,
             "COCAINE": 0,
             "PAINTING": 1,
-            "GOLD": 2
+            "GOLD": 0
         }
 
 WEIGHT = {
@@ -26,7 +27,7 @@ WEIGHT = {
             "GOLD": 66
         }
 
-PEOPLE = 2
+PEOPLE = 1
 
 a = p.LpVariable("a", lowBound = 0)
 c = p.LpVariable("c", lowBound = 0)
